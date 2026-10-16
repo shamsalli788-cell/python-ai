@@ -1,53 +1,65 @@
 
 """
-AI Prompt Kit for local businesses.
+AI Prompt Kit for a Local Business.
 
-This tool helps small business owners create three professional
-AI prompts for marketing, customer service, and business growth.
+This tool asks for basic business details and creates three
+professional AI prompts for marketing, customer service, and growth.
+It is designed for small business owners who need help writing prompts.
 """
 
-# Business details help AI generate prompts relevant to the owner's needs.
+# Ask the business owner for five details.
 business_name = input("Business name: ")
-business_type = input("Business type: ")
+business_type = input("Business type (e.g. bakery): ")
 city = input("City: ")
-customers = input("Main customers: ")
+customers = input("Main customers (e.g. students, families): ")
+budget = int(input("Monthly budget (PKR): "))
 
-# Converting the budget to an integer makes it easier to use as a number.
-monthly_budget = int(input("Monthly budget (PKR): "))
+# A clear header helps the user identify their personalised prompt kit.
+print()
+print("=" * 41)
+print(f"  AI Prompt Kit for {business_name}")
+print("=" * 41)
 
-# A clear heading makes the generated prompts easy to read and copy.
-print("\n=========================================")
-print(f"   AI Prompt Kit for {business_name}")
-print("=========================================")
-
-# Naming the platform and audience helps AI create more targeted marketing.
+# Why 1: Naming the platform, audience, and tone makes marketing prompts specific.
 marketing_prompt = (
     f"Write a short Instagram post for {business_name}, "
     f"a {business_type} in {city}.\n"
-    f"Target {customers}. Friendly tone, 1 call to action."
+    f"Target audience: {customers}. "
+    f"Use a friendly tone and include 1 clear call to action."
 )
 
+# Why 2: Giving the AI a role and a real customer problem guides its reply.
+customer_service_prompt = (
+    f"You are the customer service manager of {business_name}, "
+    f"a {business_type} in {city}.\n"
+    f"Write a polite, empathetic reply to a customer whose order "
+    f"arrived late. Apologise sincerely and offer a small discount. "
+    f"Do not invent a discount percentage or company policy."
+)
+
+# Why 3: Setting a number and budget makes growth suggestions practical.
+growth_prompt = (
+    f"Suggest exactly 3 low-cost AI ideas for a {business_type} "
+    f"in {city} to attract {customers}.\n"
+    f"Monthly budget: {budget} PKR. "
+    f"For each idea, explain how it works, its estimated monthly cost "
+    f"in PKR, and how to get started. "
+    f"Clearly label estimates and do not invent verified prices."
+)
+
+# Print the three prompts in a clean, copy-friendly format.
 print("\n[1] Marketing")
+print("-" * 41)
 print(marketing_prompt)
 
-# A specific customer-service situation helps AI produce a useful reply.
-customer_service_prompt = (
-    f"You are the manager of {business_name}, a {business_type} in {city}. "
-    f"Write a polite reply to an unhappy customer whose order arrived late. "
-    f"Apologise and offer a small discount."
-)
-
 print("\n[2] Customer Service")
+print("-" * 41)
 print(customer_service_prompt)
 
-# Stating the budget helps AI focus on ideas the business can afford.
-growth_prompt = (
-    f"Suggest 3 low-cost AI tools a {business_type} in {city} can use "
-    f"to attract {customers} with a budget of {monthly_budget} PKR per month. "
-    f"Explain the purpose and estimated cost of each idea. "
-    f"Clearly identify any prices that need verification."
-)
-
 print("\n[3] Growth")
+print("-" * 41)
 print(growth_prompt)
-print()
+
+print("\n" + "=" * 41)
+print("Your three AI prompts are ready to use!")
+print("=" * 41)
