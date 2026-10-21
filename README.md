@@ -15,41 +15,21 @@ wrok on main.py
 wrok on readme.md folder
 
 
-## Module 1 Project: AI Prompt Kit
+## Module 1 Checkpoint 2: AI Front Desk
 
-A Python tool that turns a local business's details into
-3 ready-to-use AI prompts for marketing, customer service,
-and business growth.
+**Project description:** A Python-based front desk for Sweet Crumbs Bakery that answers common questions, calculates accurate prices with discounts and delivery fees, prepares AI prompts for unknown questions, and generates a session report.
 
-### Run
+### How to Run
 
 ```bash
-uv run code/project_m1_prompt_kit.py
+uv run code/project_m1_front_desk.py
 ```
 
 ### Screenshot
 
-![Prompt Kit running](docs/project-m1-run.png)
+![AI Front Desk session screenshot](docs/project-m1-part2-run.png)
 
-### Who would pay for this?
+### Business Value
 
-Small business owners who want to use AI for marketing,
-customer service, and growth but do not know how to write
-effective prompts.
+This tool can save staff time by handling repetitive questions instantly and reducing pricing mistakes, so the owner can spend less time answering routine queries and more time serving customers.
 
-
-## Task 1.8: Business Helper Bot — Intent Design
-
-Business: Bright Future Tuition Centre
-
-| Intent | What the user wants | Keywords | Bot reply |
-|---|---|---|---|
-| Greeting | Start a conversation | hi, hello, hey | Greet the customer by name |
-| Courses | Ask about subjects | course, subjects, teach | List example subjects |
-| Timings | Ask about class times | timing, open, schedule | Share example timings |
-| Fees | Ask about prices | fee, fees, cost | Explain that fees depend on the course |
-| Location | Find the centre | location, address, where | Ask them to contact the centre |
-| Complaint | Report a problem | complaint, problem, issue, late | Apologize and offer staff assistance |
-| Human handover | Speak to a person | agent, human | Connect to a human |
-| Fallback | Ask an unknown question | No matching keyword | Print a prompt for a future AI model |
-| Goodbye | End the conversation | bye | Exit and print a summary |
